@@ -12,7 +12,7 @@ export default function SignupForm() {
 
   return (
     <div
-      className={`flex flex-col bg-white p-16 rounded-md gap-16 ${S.signup_form}`}
+      className={`flex flex-col bg-white rounded-md gap-16 ${S.signup_form}`}
     >
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <Input
