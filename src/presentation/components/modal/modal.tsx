@@ -8,9 +8,12 @@ export default function Modal({ children, open, onClose }: ModalProps) {
   return open ? (
     <div
       className="bg-black bg-opacity-20 absolute h-screen w-screen flex"
-      onClick={onClose}
+      onClick={(e) => {
+        e.stopPropagation();
+        onClose();
+      }}
     >
-      <div className="m-auto">{children}</div>
+      <div className="m-auto" onClick={(e)=> e.stopPropagation() }>{children}</div>
     </div>
   ) : null;
 }

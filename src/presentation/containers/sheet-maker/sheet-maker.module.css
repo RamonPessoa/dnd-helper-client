@@ -1,0 +1,5 @@
+.modal_content {
+  background-color: var(--page-background-color);
+  border: 1px solid var(--modal-border-color);
+  min-width: 600px;
+}
