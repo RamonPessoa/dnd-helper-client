@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "p2";
+  src: url("../assets/fonts/PressStart2P-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url("../assets/fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+:root {
+  --font-family: "Roboto";
+  --page-background-color: #222831;
+  --modal-border-color: #44628F;
+  --buttons-color: #00BE91;
+  --input-bg-color: #2E3949;
+  --input-border-color: #44628F;
+}
+
+* {
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--page-background-color);
+  color: #e2e8f0;
+}

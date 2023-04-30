@@ -1,0 +1,39 @@
+.input {
+  position: relative;
+  border-radius: 5px;
+  border: 2px solid var(--input-border-color);
+  min-height: 50px;
+  
+}
+
+.input input {
+  border-radius: 5px;
+  padding: 14px;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--input-bg-color);
+  color: white;
+}
+
+.input input:not(:placeholder-shown) + .label,
+.input input:focus + .label {
+  font-size: 12px;
+  top: 0;
+  transform: translateY(-50%);
+  color: white;
+  padding: 0 3px;
+  transition: 0.1s;
+  background: linear-gradient(180deg, var(--page-background-color) 30%, var(--input-bg-color) 50%);
+}
+
+.input .label {
+  position: absolute;
+  pointer-events: none;
+  color: #ccc;
+  font-size: 16px;
+  left: 2%;
+  top: 55%;
+  transform: translateY(-50%);
+  transition: 0.1s;
+}
