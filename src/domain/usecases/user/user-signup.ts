@@ -1,3 +1,8 @@
-export interface UserSignup {
-  signup: (userName: string, userEmail: string, userPassword: string) => Promise<string>;
+export interface UserSignupParams {
+  name: string;
+  password: string;
+}
+
+export interface UserSignup<R> {
+  signup: (params: UserSignupParams) => Promise<R>;
 }

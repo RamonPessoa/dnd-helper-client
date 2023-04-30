@@ -7,7 +7,7 @@ import axios, { AxiosError } from "axios";
 
 axios.defaults.baseURL = "http://localhost:3001";
 
-export default class AxiosHttpPostClient {
+export default class AxiosHttpClient {
   constructor() {}
 
   async post(

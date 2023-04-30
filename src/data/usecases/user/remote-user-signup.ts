@@ -3,22 +3,18 @@ import {
   RemoteHttpPostParams,
   RemoteHttpPostResponse,
 } from "@/data/protocols/http/remote-http-post-client";
+import { UserSignup, UserSignupParams } from "@/domain/usecases/user/user-signup";
 
-export interface RemoteUserSignupParams {
-  name: string;
-  password: string;
-}
-
-export default class RemoteUserSignup {
+export default class RemoteUserSignup implements UserSignup<RemoteHttpPostResponse<any>> {
   constructor(
     private readonly url: string,
     private readonly httpClient: RemoteHttpPostClient<
-      RemoteUserSignupParams,
+      UserSignupParams,
       any
     >
   ) {}
 
-  async signup(params: RemoteUserSignupParams): Promise<RemoteHttpPostResponse<any>> {
+  async signup(params: UserSignupParams): Promise<RemoteHttpPostResponse<any>> {
     return this.httpClient.post({
       url: this.url,
       body: params,
