@@ -1,11 +1,13 @@
 import Input from "@/presentation/components/input/input";
 import S from "./signup-form.module.css";
 import Button from "@/presentation/components/button/button.";
-import Tabs from "@/presentation/components/tabs/tabs";
 import useSignupForm from "./use-signup-form";
+import { useToast } from "@/presentation/components/toast";
+import { useEffect } from "react";
 
 export default function SignupForm() {
-  const { error, handleSubmit, loading, success, clearError, clearSuccess } =
+  
+  const { handleSubmit, loading, ToastComponents } =
     useSignupForm();
 
   return (
@@ -14,37 +16,22 @@ export default function SignupForm() {
     >
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <Input
-          onChange={() => {
-            clearError();
-            clearSuccess();
-          }}
           label="Usuário"
           name="name"
         />
         <Input
-          onChange={() => {
-            clearError();
-            clearSuccess();
-          }}
           label="Senha"
           type="password"
           name="password"
         />
         <Input
-          onChange={() => {
-            clearError();
-            clearSuccess();
-          }}
           label="Confirmar senha"
           type="password"
           name="confirmPassword"
         />
-        {error && <p className="text-red-500">{error}</p>}
-        {success && (
-          <p className="text-green-500">Usuário cadastrado com sucesso</p>
-        )}
         <Button>Cadastrar-se</Button>
       </form>
+      <ToastComponents />
     </div>
   );
 }

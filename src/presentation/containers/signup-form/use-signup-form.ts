@@ -1,21 +1,14 @@
+import { useToast } from "@/presentation/components/toast";
 import { useUserService } from "@/presentation/hooks/services/user-service";
 import { useState } from "react";
 
 const useSignupForm = () => {
   const { userService } = useUserService();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
+  const { ToastComponents, showToast } = useToast();
 
   const checkPasswordMatch = (password: string, confirmPassword: string) => {
     return password === confirmPassword;
-  };
-
-  const clearSuccess = () => {
-    setSuccess(false);
-  }
-  const clearError = () => {
-    setError(null);
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +18,7 @@ const useSignupForm = () => {
     const password = formValues.get("password") as string;
     const confirmPassword = formValues.get("confirmPassword") as string;
     if (!checkPasswordMatch(password, confirmPassword)) {
-      setError("Passwords don't match");
+      showToast("Passwords don't match", "error", 3000)
       return;
     }
     const response = await userService.remoteUserSignup.signup({
@@ -33,20 +26,17 @@ const useSignupForm = () => {
       password,
     });
     if (response.error) {
-      setError(response.error);
+      showToast(response.error, "error", 3000)
     }
     if(response.body) {
-      setSuccess(true);
+      showToast("User created successfully", "success", 3000)
     }
   };
 
   return {
     handleSubmit,
     loading,
-    error,
-    success,
-    clearError,
-    clearSuccess
+    ToastComponents
   };
 };
 
