@@ -1,4 +1,4 @@
-const RaceDict = {
+const RaceDict: Record<string, string> = {
   dragonborn: "Dragonborn",
   dwarf: "Anão",
   elf: "Elfo",
@@ -9,3 +9,5 @@ const RaceDict = {
   human: "Humano",
   tiefling: "Tiefling",
 };
+
+export { RaceDict };
