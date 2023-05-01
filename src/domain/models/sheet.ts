@@ -1,3 +1,5 @@
+import { IRace } from "./race";
+
 export interface ISheet {
   name: string;
   gameClasses: [
@@ -16,7 +18,7 @@ export interface ISheet {
   background: string;
   playerName: string;
   playerId: string;
-  race: string;
+  race: IRace;
   alignment: string;
   expPoints: number;
   characterLevel: number;
@@ -68,6 +70,6 @@ export interface ISheet {
   updatedAt: string;
 }
 
-export interface ISheetModel extends ISheet{
+export interface ISheetModel extends ISheet {
   id: string;
 }

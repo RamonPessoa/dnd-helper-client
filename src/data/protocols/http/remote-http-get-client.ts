@@ -5,7 +5,8 @@ export interface RemoteHttpGetParams<P> {
 
 export interface RemoteHttpGetResponse<B> {
   statusCode: number;
-  body: B;
+  body?: B;
+  error?: string;
 }
 
 export interface RemoteHttpGetClient<P, B> {
