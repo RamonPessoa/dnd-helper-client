@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 117px;
+  background-color: var(--page-background-color);
+  border: 2px solid var(--input-border-color);
+}
+
+.add {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+.add:active {
+  background-color: rgba(60, 60, 60, 0.6);
+  transform: scale(0.98);
+}
+
+.summary {
+  display: flex;
+  width: 100%;
+  gap: 21px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 1.4em;
+}
