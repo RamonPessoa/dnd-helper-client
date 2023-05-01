@@ -1,6 +1,7 @@
 import Avatar from "@/presentation/components/avatar/avatar";
 import Button from "@/presentation/components/button/button.";
 import Modal from "@/presentation/components/modal/modal";
+import SheetButton from "@/presentation/components/sheet-button/sheet-button";
 import SheetMaker from "@/presentation/containers/sheet-maker/sheet-maker";
 import SheetMakerContextProvider from "@/presentation/containers/sheet-maker/sheet-maker-context";
 import { useRaceService } from "@/presentation/hooks/services/race-service";
@@ -21,8 +22,7 @@ export default function UserPage() {
       <SheetMakerContextProvider>
         <SheetMaker open={isSheetMakerOpen} onClose={handleCloseSheetMaker} />
       </SheetMakerContextProvider>
-      <Button onClick={handleOpenSheetMaker}>Criar ficha</Button>
-      <Avatar src="https://picsum.photos/200/200" />
+      <SheetButton onClick={handleOpenSheetMaker}/>
     </>
   );
 }
