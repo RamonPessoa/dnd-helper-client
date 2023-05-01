@@ -26,7 +26,7 @@ const useSigninForm = () => {
     if (response.body) {
       showToast("User logged in successfully", "success", 3000);
       setToken(response.body.token);
-      router.push("/user");
+      router.push("/user/sheets");
     }
   };
   return {
