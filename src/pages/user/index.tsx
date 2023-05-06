@@ -1,6 +1,4 @@
 import SheetButton from "@/components/sheet-button/sheet-button";
-import SheetMaker from "@/presentation/containers/sheet-maker/sheet-maker";
-import SheetMakerContextProvider from "@/presentation/containers/sheet-maker/sheet-maker-context";
 import { useState } from "react";
 
 export default function UserPage() {
@@ -15,9 +13,6 @@ export default function UserPage() {
   };
   return (
     <>
-      <SheetMakerContextProvider>
-        <SheetMaker open={isSheetMakerOpen} onClose={handleCloseSheetMaker} />
-      </SheetMakerContextProvider>
       <SheetButton onClick={handleOpenSheetMaker}/>
     </>
   );

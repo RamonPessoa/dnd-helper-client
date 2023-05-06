@@ -1,5 +1,5 @@
 import { useToast } from "@/components/toast";
-import { useAuth } from "@/presentation/contexts/auth";
+import { useAuth } from "@features/authentication/contexts/auth";
 import { useUserService } from "@/services/services/user-service";
 import { useRouter } from "next/router";
 import { useState } from "react";
