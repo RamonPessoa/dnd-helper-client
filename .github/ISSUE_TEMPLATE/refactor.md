@@ -1,7 +1,7 @@
 ---
 name: Refactor
 about: Define a necessary code refactor
-title: "[Refacto] <short issue description>"
+title: "[Refactor] <short issue description>"
 labels: ''
 assignees: ''
 
