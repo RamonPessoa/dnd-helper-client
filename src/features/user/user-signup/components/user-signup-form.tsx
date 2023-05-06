@@ -1,6 +1,6 @@
-import Input from "@/presentation/components/input/input";
+import Input from "@/components/input/input";
 import S from "../styles/user-signup-form.module.css";
-import Button from "@/presentation/components/button/button.";
+import Button from "@/components/button/button.";
 import useSignupForm from "../hooks/use-user-signup-form";
 
 export default function SignupForm() {

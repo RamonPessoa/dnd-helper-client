@@ -1,4 +1,4 @@
-import { useToast } from "@/presentation/components/toast";
+import { useToast } from "@/components/toast";
 import { useAuth } from "@/presentation/contexts/auth";
 import { useUserService } from "@/services/services/user-service";
 import { useRouter } from "next/router";

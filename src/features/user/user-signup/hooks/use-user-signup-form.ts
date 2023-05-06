@@ -1,4 +1,4 @@
-import { useToast } from "@/presentation/components/toast";
+import { useToast } from "@/components/toast";
 import { useUserService } from "@/services/services/user-service";
 import { useState } from "react";
 

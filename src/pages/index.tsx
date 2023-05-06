@@ -1,8 +1,8 @@
-import SignupForm from "@features/user/user-signup/components/user-signup-form";
+import SignupForm from "@/features/user/user-signup/components/user-signup-form";
 import Style from "./home.module.css";
-import UserSigninForm from "@features/user/user-signin/components/user-signin-form";
+import UserSigninForm from "@/features/user/user-signin/components/user-signin-form";
 import useHome from "./use-home";
-import Tabs from "@/presentation/components/tabs/tabs";
+import Tabs from "@/components/tabs/tabs";
 
 export default function Home() {
   const { tabs, selectedTab, handleSelectTab } = useHome();

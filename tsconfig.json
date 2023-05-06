@@ -16,7 +16,7 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@features/*": ["./src/presentation/features/*"],
+      "@features/*": ["./src/features/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "postcss.config.js", "tailwind.config.js", "tailwind.config.js"],

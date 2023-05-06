@@ -1,4 +1,4 @@
-import SheetButton from "@/presentation/components/sheet-button/sheet-button";
+import SheetButton from "@/components/sheet-button/sheet-button";
 import useUserSheets from "../hooks/use-user-sheets";
 import SheetMaker from "@/presentation/containers/sheet-maker/sheet-maker";
 import Style from "../styles/user-sheets.module.css";
