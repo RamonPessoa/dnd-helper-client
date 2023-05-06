@@ -9,11 +9,14 @@ import {
 } from "@/domain/usecases/user/user-login";
 
 export default class RemoteUserLogin
-  implements UserLogin<RemoteHttpPostResponse<any>>
+  implements UserLogin<RemoteHttpPostResponse<UserLoginResponse>>
 {
   constructor(
     private readonly url: string,
-    private readonly httpClient: RemoteHttpPostClient<UserLoginParams, any>
+    private readonly httpClient: RemoteHttpPostClient<
+      UserLoginParams,
+      UserLoginResponse
+    >
   ) {}
 
   login(
