@@ -1,6 +1,6 @@
-import SignupForm from "@/presentation/containers/signup-form/signup-form";
+import SignupForm from "@features/user/user-signup/components/user-signup-form";
 import Style from "./home.module.css";
-import UserSigninForm from "@/presentation/features/user/user-signin/components/user-signin-form";
+import UserSigninForm from "@features/user/user-signin/components/user-signin-form";
 import useHome from "./use-home";
 import Tabs from "@/presentation/components/tabs/tabs";
 
