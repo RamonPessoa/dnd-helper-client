@@ -1,7 +1,7 @@
 import SheetButton from "@/presentation/components/sheet-button/sheet-button";
-import useUserSheets from "./use-user-sheets";
-import SheetMaker from "../sheet-maker/sheet-maker";
-import Style from "./user-sheets.module.css";
+import useUserSheets from "../hooks/use-user-sheets";
+import SheetMaker from "@/presentation/containers/sheet-maker/sheet-maker";
+import Style from "../styles/user-sheets.module.css";
 
 export function UserSheets() {
   const { isSheetMakerOpen, handleOpenSheetMaker, handleCloseSheetMaker } =
