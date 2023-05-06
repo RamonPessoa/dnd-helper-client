@@ -1,3 +1,10 @@
 .button {
-  background-color: var(--buttons-color);
+  background-color: var(--success-primary);
+  border-radius: 5;
+}
+
+.disabled {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  cursor: not-allowed;
 }

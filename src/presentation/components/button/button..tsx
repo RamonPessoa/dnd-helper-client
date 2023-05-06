@@ -1,16 +1,21 @@
 import { ButtonHTMLAttributes } from "react";
 import Style from "./button.module.css";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  loading?: boolean;
+}
 
 export default function Button(props: ButtonProps) {
-  const { children, ...rest } = props;
+  const { children, className, loading, ...rest } = props;
   return (
     <button
-      className={`bg-blue-500 text-white rounded-md p-3 text-sm ${Style.button}`}
+      className={`${Style.button} ${
+        loading ? Style.disabled : ""
+      } ${className}`}
       {...rest}
+      disabled={loading}
     >
-      {children}
+      {!loading ? children : "carregando..."}
     </button>
   );
 }
