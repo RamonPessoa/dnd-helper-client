@@ -22,7 +22,9 @@ export default function Tabs(props: TabsProps) {
         return (
           <div className="w-full" key={item} onClick={() => handleSelect(item)}>
             <div className="text-center pb-3">{item}</div>
-            <div className={selected === item ? `border-b-4 border-white` : `border-b-4 border-gray-400`} />
+            <div
+              className={`${Style.tab_bottom} ${selected === item ? Style["--selected"] : ""}`}
+            />
           </div>
         );
       })}

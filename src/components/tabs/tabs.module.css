@@ -1,3 +1,8 @@
 .tab_bottom {
-  background-color: var(--modal-border-color);
+  background-color: var(--tabs-border-color);
+  height: 4px;
+}
+
+.--selected {
+  background-color: white;
 }
