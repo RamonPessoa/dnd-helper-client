@@ -1,5 +1,5 @@
 import { useToast } from "@/presentation/components/toast";
-import { useUserService } from "@/presentation/hooks/services/user-service";
+import { useUserService } from "@/services/services/user-service";
 import { useState } from "react";
 
 const useSignupForm = () => {

@@ -1,6 +1,6 @@
 import RemoteUserLogin from "@/data/usecases/user/remote-user-login";
 import RemoteUserSignup from "@/data/usecases/user/remote-user-signup";
-import AxiosHttpClient from "@/infra/api/axios";
+import AxiosHttpClient from "@/lib/http-client/axios";
 
 const axiosHttpPostClient = new AxiosHttpClient();
 const remoteUserSignup = new RemoteUserSignup("/users", axiosHttpPostClient);

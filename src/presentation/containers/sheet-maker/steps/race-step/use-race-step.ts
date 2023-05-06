@@ -1,6 +1,6 @@
 import { IRaceListItem } from "@/domain/usecases/race/get-race-list";
 import { useToast } from "@/presentation/components/toast";
-import { useRaceService } from "@/presentation/hooks/services/race-service";
+import { useRaceService } from "@/services/services/race-service";
 import { useCallback, useEffect, useState } from "react";
 
 interface UseNameStepProps {

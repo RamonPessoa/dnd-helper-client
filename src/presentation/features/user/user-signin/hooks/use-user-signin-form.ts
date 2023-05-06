@@ -1,6 +1,6 @@
 import { useToast } from "@/presentation/components/toast";
 import { useAuth } from "@/presentation/contexts/auth";
-import { useUserService } from "@/presentation/hooks/services/user-service";
+import { useUserService } from "@/services/services/user-service";
 import { useRouter } from "next/router";
 import { useState } from "react";
 

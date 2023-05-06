@@ -1,7 +1,7 @@
 import { RemoteGetRaceList } from "@/data/usecases/race/remote-get-race-list";
 import RemoteUserLogin from "@/data/usecases/user/remote-user-login";
 import RemoteUserSignup from "@/data/usecases/user/remote-user-signup";
-import AxiosHttpClient from "@/infra/api/axios";
+import AxiosHttpClient from "@/lib/http-client/axios";
 
 const axiosHttpClient = new AxiosHttpClient();
 const remoteGetRaceList = new RemoteGetRaceList(
