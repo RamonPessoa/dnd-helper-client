@@ -4,9 +4,9 @@ import { useUserService } from "@/presentation/hooks/services/user-service";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const useSigninForm = () => {
+const useUserSigninForm = () => {
   const { userService } = useUserService();
-  const [loading, setLoading] = useState(false);
+  const [loadingLogin, setLoadingLogin] = useState(false);
   const { ToastComponents, showToast } = useToast();
   const { setToken } = useAuth();
   const router = useRouter();
@@ -16,10 +16,12 @@ const useSigninForm = () => {
     const formValues = new FormData(event.currentTarget);
     const name = formValues.get("name") as string;
     const password = formValues.get("password") as string;
+    setLoadingLogin(true);
     const response = await userService.remoteUserLogin.login({
       name,
       password,
     });
+    setLoadingLogin(false);
     if (response.error) {
       showToast(response.error, "error", 3000);
     }
@@ -30,10 +32,10 @@ const useSigninForm = () => {
     }
   };
   return {
-    loading,
+    loadingLogin,
     ToastComponents,
     handleSubmit,
   };
 };
 
-export default useSigninForm;
+export default useUserSigninForm;
